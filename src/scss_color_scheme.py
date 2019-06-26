@@ -18,23 +18,16 @@ def retrieveColors(item, i):
         colors_rgba = re.findall(r'rgba\s?\(.*?\)', content)
         #find all occurrences of hex and rgba color strings
 
-    print('item name: ' + item)
-    print(f'hex: {colors_hex}')
-    print(f'rgba: {colors_rgba}')
-
     for c_hex in colors_hex: # Iterate through hex colors in file
         if c_hex not in used_colors: # Eliminate Duplicates
             used_colors.append(c_hex)
-            print(used_colors)
 
     for c_rgba in colors_rgba: #Iterate through rgba colors in file
         if c_rgba not in used_colors: # Eliminate duplicates
             used_colors.append(c_rgba)
-            print(used_colors)
 
     for color in used_colors:
         i += 1
-        print(f'{i}: {used_colors}')
         output += f"${file_prefix[0]}_{i}:{color};\n"
         # Add the color variable into output
         try:
