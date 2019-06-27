@@ -1,4 +1,4 @@
-# css_color_scheme
+# scss_color_scheme
 Nobody likes hard coded colors, right? This repo is here for you.
 
 ## What does it do?
